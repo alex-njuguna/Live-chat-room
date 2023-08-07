@@ -1,0 +1,37 @@
+{% extends 'core/base.html' %}
+
+
+{% block title %}
+    Sign up
+{% endblock title %}
+    
+
+{% block content %}
+    <div class="p-10 lg:p-20 text-center">
+        <h1 class="text-3xl lg:text-6xl text-white">Sign up</h1>
+    </div>
+
+    <form action="" method="post" class="lg:w-1/4 px-4 mx-auto">
+        {% csrf_token %}
+
+        <div class="mb-5">
+            <label for="username" class="text-white">Username</label>
+
+            <input type="text" name="username" class="w-full mt-2 px-4 py-2 rounded-xl">
+        </div>
+
+        <div class="mb-5">
+            <label for="password" class="text-white">Password</label>
+
+            <input type="text" name="password1" class="w-full mt-2 px-4 py-2 rounded-xl">
+        </div>
+
+        <div class="mb-5">
+            <label for="password2" class="text-white">Repeat password</label>
+
+            <input type="text" name="password2" class="w-full mt-2 px-4 py-2 rounded-xl">
+        </div>
+
+    </form>
+{% endblock content %}
+    
