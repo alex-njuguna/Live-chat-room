@@ -86,6 +86,12 @@
 
             return false
         }
+
+        // scrool to the bottom
+        function scrollToBottom(){
+            const objDiv = document.querySelector('#chat-messages')
+            objDiv.scrollTop = objDiv.scrollHeight
+        }
     </script>
 {% endblock %}
     
