@@ -13,7 +13,12 @@
 
     <div class="lg:w-2/4 mx-4 lg:mx-auto p-4 bg-white rounded-xl">
         <div class="chat-messages space-y-3" id="chat-messages">
-            
+            {% for message in messages %}
+                <div class="p-4 bg-gray-200 rounded-xl">'
+                    <p class="font-semibold"> {{ message.user.username }} </p>'
+                    <p> {{ message.content }} </p>
+                </div>'
+            {% endfor %}
         </div>
     </div>
 
